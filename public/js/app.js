@@ -1,4 +1,4 @@
-/*
+
 "use strict";
 
 
@@ -51,7 +51,7 @@ class Component extends App{
 	ukayLayout(){
 		let html = `
 			 <nav>
-			    <div class="nav-wrapper blue darken-4">
+			    <div class="nav-wrapper black">
 			      <a href="#" class="brand-logo yellow-text ">UKAY v1.0</a>
 			      <ul id="nav-mobile" class="right hide-on-med-and-down">
 			        <li><a href="#">Items</a></li>
@@ -85,7 +85,7 @@ class Component extends App{
 
 					</ul>
 				  </div>
-				<footer class="page-footer blue darken-4">		          
+				<footer class="page-footer black">		          
 		          <div class="footer-copyright">
 		            <div class="container">
 		            © 2016 - Another decode App
@@ -102,12 +102,12 @@ class Component extends App{
 
 let component = new Component();
 component.ukayLayout();
-*/
 
 
 
 
-"use strict";
+
+/*"use strict";
 
 class App{
 	constructor(){
@@ -893,7 +893,7 @@ class Component extends App{
 }
 
 let component = new Component();
-component.recipeLayout();
+component.recipeLayout();*/
 
 
 //////////////////////////////////////
