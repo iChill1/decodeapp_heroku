@@ -120,7 +120,7 @@ class App{
     let t = {"team":w.value,"photo":e.value,"player":r.value};
     this.teams.push(t);
 
-    w.value = e.value = r.value = ''; //Clear Fields
+    w.value = e.value = r.value = '';
     this.teamListInfo();
   }
 
@@ -129,14 +129,6 @@ class App{
     table.deleteRow(key);
     this.teams.splice(key,1);
 
-    // let m = this.movies;
-    // let dummy = [];
-    // for(let i=0;i<m;i++){
-    //  if(key!=i){
-    //    dummy.push(m[i]);
-    //  }
-    // }
-    // this.movies = dummy;
     let details = document.getElementById('teamDetails');
     details.innerHTML = "";
     
@@ -149,9 +141,9 @@ class App{
     let a = document.getElementById('updatePlayer');
 
     let m = this.teams[key];
-    let movie = {"id":m.id,"team":t.value,"photo":m.photo,"player":a.value};
+    let team = {"id":m.id,"team":t.value,"photo":m.photo,"player":a.value};
 
-    this.teams[key] = movie;
+    this.teams[key] = team;
     let details = document.getElementById('teamDetails');
     details.innerHTML = "";
     
@@ -191,7 +183,6 @@ class App{
     let objects = [];
     let r = this.teams;
     for(let i=0;i<r.length;i++){
-      // console.log("r:",r[i].Title.toUpperCase().indexOf(title.toUpperCase()));
       let expr1 = (r[i].team.toUpperCase().indexOf(value.toUpperCase()) > -1);
       if(expr1){
         objects.push(r[i]);
@@ -305,9 +296,7 @@ class Component extends App{
   }
 
   teamListInfo(filter){
-    // console.log(filter);
     let html = "";
-    // let m = this.movies;
     let m = this.searchTeam(filter);
     for(let i=0;i<m.length;i++){  
       html += `
@@ -332,11 +321,10 @@ class Component extends App{
                 </a>
             </div>
             <div class="media-body" id="teamDetailsInfo">
-                <h4 class="media-heading">${this.teams[key].team}</h4>
-                Players: ${this.teams[key].player}<br/>
-                <br>
-                <br>
-                <br>
+            <br>
+            <br>
+                <h1 class="media-heading">${this.teams[key].team}</h1>
+                Players: <b>${this.teams[key].player}<br/></b>
                 <br>
                 <br>
             <button class="btn btn-primary" onclick="component.teamUpdate(${key})">Update</button>
@@ -385,16 +373,12 @@ class Component extends App{
             <br/>
             <button class="btn btn-success btn-block" onclick="component.updateTeam(${key})">Save</button>
       `,document.getElementById('teamDetailsInfo'));
-  }
-
-
-  
+  }  
 }
 
 let component = new Component();
 component.teamList();
 component.teamCreate();
-
 
 var slideIndex = 0;
 carousel();
