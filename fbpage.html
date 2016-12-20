@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Facebook Login JavaScript Example</title>
+<title>Fb Page Login</title>
 <meta charset="UTF-8">
 </head>
 <body>
@@ -18,7 +18,7 @@
       // Logged into your app and Facebook.
       testAPI();
     } 
-	else {
+  else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
       document.getElementById('status').innerHTML = 'Please log ' +
@@ -37,7 +37,7 @@
 
   window.fbAsyncInit = function() {
   FB.init({
-    appId      : 'your app id is here your app id is here your app id is here your app id is here your app id is here your app id is hereyour app id is here your app id is here',
+    appId      : '1885594084997433',
     cookie     : true,  // enable cookies to allow the server to access 
                         // the session
     xfbml      : true,  // parse social plugins on this page
@@ -76,13 +76,27 @@
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name +' your email is ');
+      console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';'
-    });
-  }
+        'Thanks for logging in, ' + response.name + '!';
+    });        
+  window.open('https://decodeapp-herokusuarez.herokuapp.com/app.html#');
+    this.fbname = [
+      {
+        "name": "Edbriel John Finney",
+        "name": "Joe Syl",
+        "name": "Shane Alanys Goloran Quisay",
+        "name": "Horace Europa",
+      }
+    ];
+    for (var i = 0; i < this.fbname.length; i++) {
+      if (response.name == fbname) {
+          window.open('https://decodeapp-herokusuarez.herokuapp.com/app.html#');
+      }
+    }
+    }
 </script>
-
+  
 <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
