@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Facebook Login</title>
+<title>Fb Page Login</title>
 <meta charset="UTF-8">
 </head>
 <body>
-<body background="">
 <script>
-// This is called with the results from from FB.getLoginStatus().
+  // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -70,13 +69,27 @@
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
     FB.api('/me', function(response) {
-      console.log('Successful login for: ' + response.name +' your email is ');
+      console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Thanks for logging in, ' + response.name + '!';''
-    });
-  }
+        'Thanks for logging in, ' + response.name + '!';
+    });        
+  window.open('https://decodeapp-herokufinney.herokuapp.com/app.html#');
+    this.fbname = [
+      {
+        "name": "Edbriel John Finney",
+        "name": "Joe Syl",
+        "name": "Shane Alanys Goloran Quisay",
+        "name": "Horace Europa",
+      }
+    ];
+    for (var i = 0; i < this.fbname.length; i++) {
+      if (response.name == fbname) {
+          window.open('https://decodeapp-herokufinney.herokuapp.com/app.html#');
+      }
+    }
+    }
 </script>
-
+  
 <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
